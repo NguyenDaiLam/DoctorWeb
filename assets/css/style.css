@@ -1,4 +1,125 @@
 *{
     margin: 0;
-    
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
+#header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/assets/img/img-hospital.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+}
+.nav .logo-header{
+    width: 75%;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #50C4CF;
+    display: block;
+    margin: auto;
+    transition: 0.3s;   
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+#header .text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 70px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.text-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    background: none;
+    position: relative;
+    cursor: pointer;
+}
+.text-btn:hover{
+    border: 1px solid #50C4CF;
+    color: #000;
+    background-color: #50C4CF;
+    transition: 0.5s;
+}
+.nav .fas{
+    display: none;
+}
+@media (max-width:740px){
+    .text-box h1{
+        font-size: 25px;
+    }
+    .text-box p{
+        
+        font-size: 10px;
+        color: #fff;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #ccc;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav .fas{
+        display: block;
+        color: #000;
+        
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+
+}
+
+
+
